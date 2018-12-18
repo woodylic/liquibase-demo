@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd
+        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <preConditions>
+        <dbms type="mysql" />
+        <runningAs username="root" />
+    </preConditions>
+
+    <include file="changelog/20180108153042135_create_user_table.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/20180109114233058_add_username_column_in_user_table.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/20180110122344382_init_user_data.xml" relativeToChangelogFile="true"/>
+
+</databaseChangeLog>
